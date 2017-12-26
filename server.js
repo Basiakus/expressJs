@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
-const notes = "notes: "
-let stringifyFile = ([notes]);
+let stringifyFile = ([]);
 const fs = require('fs');
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
