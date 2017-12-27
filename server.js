@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-let stringifyFile = ([]);
+let stringifyFile;
 const fs = require('fs');
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
@@ -8,7 +8,7 @@ app.use(bodyParser.json());
 app.get('/getNote', function(req, res) {
 	fs.readFile('./testJson.json', 'utf-8', function(err, data) {
 		if(err) throw err;
-		stringifyFile = [data]
+		stringifyFile = [data];
 		res.send(data);
 	});
 });
